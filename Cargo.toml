@@ -7,14 +7,15 @@ edition = "2021"
 
 [dependencies]
 postcard = { version = "1.0.4", features = ["use-std"] }
+rmp-serde = "1.1.2"
 ron = "0.8.0"
 serde = { version = "1.0.152", features = ["derive"] }
 serde_json = "1.0.91"
 serde_yaml = "0.9.17"
-toml = "0.7.0"
+toml = "0.8.1"
 
 [dev-dependencies]
-criterion = "0.4.0"
+criterion = "0.5.1"
 
 [[bench]]
 name = "canada"
