@@ -6,16 +6,16 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-postcard = { version = "1.0.4", features = ["use-std"] }
+postcard = { version = "1.0.8", features = ["use-std"] }
 rmp-serde = "1.1.2"
-ron = "0.8.0"
-serde = { version = "1.0.152", features = ["derive"] }
-serde_json = "1.0.91"
-serde_yaml = "0.9.17"
+ron = "0.8.1"
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.107"
+serde_yaml = "0.9.25"
 toml = "0.8.1"
 
 [dev-dependencies]
-criterion = "0.5.1"
+criterion = "0.4.0"
 
 [[bench]]
 name = "canada"
