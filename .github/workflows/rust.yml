@@ -2,21 +2,25 @@ name: Rust
 
 on:
   push:
-    branches: [ "trunk" ]
+    branches: ["trunk"]
   pull_request:
-    branches: [ "trunk" ]
+    branches: ["trunk"]
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: cargo build --verbose
-    - name: Run benchmarks
-      run: cargo bench --verbose
+      - uses: actions/checkout@v3
+      - name: Build
+        run: cargo build --verbose
+      - name: Run benchmarks
+        run: cargo bench --verbose
+
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: target/criterion
